@@ -6,7 +6,7 @@ Deface index template from Kerala Cyber Warriors
 
 Steps:
 1) Upload rabbit.php to the server, open it from browser, enter encryption key and select infect option.
-2) Now upload the deface index (index.php). The site admin can now visit the site and decrypt the files by entering the key there.
+2) Now open the website home (or any random page) and you will land at the decryptor index page. Enter  the key to decrypt files.
 
 
-The encryption key should contain a substring as specified in line 446 of index.php. This is to check for false key entries for decryption.
+The encryption key should contain a substring 'r4b1t' . This is specified in base64 decoded code line 49. This is to check for false key entries for decryption.
