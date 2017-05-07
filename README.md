@@ -9,4 +9,4 @@ Steps:
 2) Now open the website home (or any random page) and you will land at the decryptor index page. Enter  the key to decrypt files.
 
 
-The encryption key should contain a substring 'r4b1t' . This is specified in base64 decoded code line 49. This is to check for false key entries for decryption.
+The encryption key should contain a substring 'r4b1t' (This is specified in base64 decoded code in line 49 of rabbit.php). This is to check for false key entries for decryption.
